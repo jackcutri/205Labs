@@ -2,8 +2,8 @@
 
 {% block content %}
     <h1><b>List of Artists</b></h1>
-    {% for artist in artist %}
-    <div><a href="/specificArtist">{{ artist.name }}</a></div>
+    {% for a in artists %}
+    <div><a href="/specificArtist">{{ a }}</a></div>
 
     {% endfor %}
 {% endblock %}}

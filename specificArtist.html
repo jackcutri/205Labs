@@ -1,8 +1,11 @@
-{% extends "artists.html" %}
+{% extends "base.html" %}
 
 {% block content %}
-    <h1><b>{{ artist.name }}</b></h1>
-    <div><p>Bio: {{ artist.bio }}</p></div>
-    <div><p>Hometown: {{ artist.hometown }}</p></div>
-    <div><p>Upcoming Events: {{ artist.upcomingEvents }}</p></div>
-{% endblock %}
+    <h1><b>King Krule</b></h1>
+
+    <div><p>Bio: Indie songwriter who mixes trip-hop beats and jazz guitar</p></div>
+    <div><p>Hometown: London, England</p></div>
+    <div><p>Upcoming Events: The Haunt 9/15/15 at 9:00pm</p></div>
+
+    {% endfor %}
+{% endblock %}}
