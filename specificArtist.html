@@ -1,10 +1,10 @@
 {% extends "base.html" %}
 
 {% block content %}
-    <h1><b>King Krule</b></h1>
+    <h1><b>Name: {{ info.name }}</b></h1>
 
-    <div><p>Bio: Indie songwriter who mixes trip-hop beats and jazz guitar</p></div>
-    <div><p>Hometown: London, England</p></div>
-    <div><p>Upcoming Events: The Haunt 9/15/15 at 9:00pm</p></div>
+    <div><p>Bio: {{ info.bio }}</p></div>
+    <div><p>Hometown: {{ info.hometown }}</p></div>
+    <div><p>Upcoming Events: {{ info.upcomingEvents }}</p></div>
 
 {% endblock %}}

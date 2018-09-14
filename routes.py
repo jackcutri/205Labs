@@ -17,7 +17,11 @@ def artists():
 @app.route('/')
 @app.route('/specificArtist')
 def specific():
-    info = ["Bio", "Hometown", "Upcoming Events"]
+    info = {"name": "John Frusciante",
+            "bio": "Guitarist for the Red Hot Chili Peppers",
+            "hometown": "Queens, NY",
+            "upcomingEvents": "The Haunt, 9/15/18"
+            }
 
     return render_template('specificArtist.html', info=info)
 
