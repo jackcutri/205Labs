@@ -17,4 +17,7 @@ def artists():
 @app.route('/')
 @app.route('/specificArtist')
 def specific():
-    return render_template('specificArtist.hmtl')
+    info = ["Bio", "Hometown", "Upcoming Events"]
+
+    return render_template('specificArtist.html', info=info)
+
