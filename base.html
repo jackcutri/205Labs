@@ -8,6 +8,16 @@
             <a href="/index">Home</a></div>
             <a href="/artists">List of Artists</a></div>
             <a href="/newArtists">Create New Artist</a></div>
+        </div>
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+        <ul>
+            {% for message in messages %}
+            <li>{{ message }}</li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+        {% endwith %}
         {% block content %}{% endblock %}
     </body>
 </html>

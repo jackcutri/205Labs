@@ -1,8 +1,23 @@
 {% extends "base.html" %}
 
 {% block content %}
-    <h1><b>Sorry!</b></h1>
-
-    <div><p>This page is currently under construction.</p></div>
-
+    <h1><b>Create New Artist</b></h1>
+    <form action="" method="post">
+        {{ form.hidden_tag() }}
+        <p>
+            {{ form.name.label }}<br>
+            {{ form.name(size=32) }}
+        </p>
+        <p>
+            {{ form.hometown.label }}<br>
+            {{ form.hometown(size=32) }}
+        </p>
+        <p>
+            {{ form.description.label }}<br>
+            {{ form.description(size=100) }}
+        </p>
+        <p>
+            {{ form.submit() }}
+        </p>
+    </form>
 {% endblock %}}
