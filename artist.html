@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1><b>Name: {{ artist.name }}</b></h1>
+
+    <div><p>Genre: {{ artist.genre }}</p></div>
+    <div><p>Bio: {{ artist.bio }}</p></div>
+    <div><p>Hometown: {{ artist.hometown }}</p></div>
+    <div><p>Upcoming Events: {{ artist.events }}</p></div>
+
+{% endblock %}}
+

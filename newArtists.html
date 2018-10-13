@@ -9,12 +9,16 @@
             {{ form.name(size=32) }}
         </p>
         <p>
+            {{ form.genre.label }}<br>
+            {{ form.genre(size=32) }}
+        </p>
+        <p>
             {{ form.hometown.label }}<br>
             {{ form.hometown(size=32) }}
         </p>
         <p>
-            {{ form.description.label }}<br>
-            {{ form.description(size=100) }}
+            {{ form.bio.label }}<br>
+            {{ form.bio(size=100) }}
         </p>
         <p>
             {{ form.submit() }}
