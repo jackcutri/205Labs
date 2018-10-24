@@ -5,10 +5,19 @@
     <body>
         <div>
             Jack's Radio:
-            <a href="/index">Home</a></div>
-            <a href="/artists">List of Artists</a></div>
-            <a href="/newArtists">Create New Artist</a></div>
+            <a href="{{ url_for('index') }}">Home</a>
+            {% if current_user.is_anonymous %}
+            <a href="{{ url_for('login') }}">Login</a>
+            {% else %}
+            <a href="/artists">List of Artists</a>
+            <a href="/newArtist">Create New Artist</a>
+            <a href="/newVenue">Create New Venue</a>
+            <a href="/newEvent">Create New Event</a>
+            <a href="{{ url_for('user', username=current_user.username) }}">Profile</a>
+            <a href="{{ url_for('logout') }}">Logout</a>
+            {% endif %}
         </div>
+        <hr>
         {% with messages = get_flashed_messages() %}
         {% if messages %}
         <ul>

@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1><b>Create New Event</b></h1>
+    <form action="" method="post">
+        {{ form.hidden_tag() }}
+        <p>
+            {{ form.name.label }}<br>
+            {{ form.name(size=50) }}
+        </p>
+        <p>
+            {{ form.date.label }}<br>
+            <input type="date" name="date">
+        </p>
+        <p>
+            {{ form.time.label }}<br>
+            <input type="time" name="time">
+        </p>
+        <p>
+            {{ form.venue.label }}<br>
+            <select>
+                {% for v in form.venue.choices %}
+                <option value="">{{ v }}</option>
+                {% endfor %}
+            </select>
+        </p>
+        <p>
+            {{ form.artists.label }}<br>
+            <select>
+                {% for a in form.artists.choices %}
+                <option value="">{{ a }}</option>
+                {% endfor %}
+            </select>
+        </p>
+        <p>
+            {{ form.submit() }}
+        </p>
+    </form>
+{% endblock %}

@@ -6,7 +6,11 @@
     <div><p>Genre: {{ artist.genre }}</p></div>
     <div><p>Bio: {{ artist.bio }}</p></div>
     <div><p>Hometown: {{ artist.hometown }}</p></div>
-    <div><p>Upcoming Events: {{ artist.events }}</p></div>
+    <div><p>Upcoming Events:</p></div>
+    {% for event in events %}
+    <div><p>{{ event }}</p></div>
+    {% endfor %}
+
 
 {% endblock %}}
 
